@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 小工具</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="body">
+  <form action="/" method="post">
+    <div class="card">
+      <img
+        src="https://i.imgur.com/rOeL53J.png"
+        alt="料理鼠王_logo" class="card-img">
+      <h1 class="card-title">今天吃什麼？</h1>
+      <h2 class="card-subtitle">— 家常料理菜單推薦 —</h2>
+      <p class="card-text">
+        <% if (description.length) { %>
+          <%= description %>
+        <% } else { %>
+          <%= '???' %>
+        <% } %>
+      </p>
+      <input type="text" name="description" class="card-input" placeholder="填寫家中有的食材" />
+      <button type="submit" class="card-btn">送出</button>
+    </div>
+  </form>
+</body>
+
+</html>
